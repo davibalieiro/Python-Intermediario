@@ -21,15 +21,9 @@ class Car:
     @color.setter
     def color(self, value):
         print('Set my Color')
+        if value == 'Red':
+            raise ValueError('Color not allowed')
         self._color = value
 
-    
-def ver_car(car):
-    return car.color
-
-
 car = Car('Blue')
-# car.color = 'Red'
-
-# getter -> obter valor
-ver_car(car)
+car.color = 'Red'
